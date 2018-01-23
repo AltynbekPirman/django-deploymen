@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    {% extends "landing/base.html"%}
+    {% block head_block %}
+    {% load my_extras %}
+        <title>home page</title>
+    {% endblock %}
+    {% block body_block%}
+        <div class="container">
+            <div class="jumbotron">
+                <h1>welcome</h1>
+                <a href="{% url 'landing:formpage' %}">click me to register</a><br>
+                <a href="{% url 'admin:index' %}">click to go admin page</a>
+            </div>
+        </div>
+        <h2>{{greet|rusify}}</h2>
+    {% endblock %}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+    {% extends 'landing/base.html'%}
+    {% block body_block%}
+        <div class="container">
+            <h1>fill the form below</h1>
+            <form method="post">
+                {{registration.as_p}}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" value="Click me">
+            </form>
+            <a href="{% url 'index' %}">click to go to home page</a>
+        </div>
+    {% endblock %}

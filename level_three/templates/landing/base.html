@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% block head_block%}
+        {% endblock %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'landing:formpage' %}">Form</a>
+                </li>
+            </ul>
+        </header>
+        {% block body_block%}
+        {%endblock%}
+        <footer style="position:fixed; bottom:30px; left:40px;">
+            <a href="#">Designed by Altuha</a>
+        </footer>
+    </body>
+</html>
